@@ -1,3 +1,5 @@
+"use client"
+
 import emailjs from "@emailjs/browser"
 import { Canvas } from "@react-three/fiber"
 import { Suspense, useRef, useState } from "react"
@@ -27,8 +29,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "JavaScript Mastery",
@@ -36,7 +38,7 @@ const Contact = () => {
           to_email: "sujata@jsmastery.pro",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -157,12 +159,12 @@ const Contact = () => {
           />
 
           <Suspense fallback={<Loader />}>
-            <Fox
+            {/* <Fox
               currentAnimation={currentAnimation}
               position={[0.5, 0.35, 0]}
               rotation={[12.629, -0.6, 0]}
               scale={[0.5, 0.5, 0.5]}
-            />
+            /> */}
           </Suspense>
         </Canvas>
       </div>

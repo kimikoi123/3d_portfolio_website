@@ -29,29 +29,30 @@ const Home = () => {
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition
 
-    // If screen width is less than 768px, adjust the scale and position
-    if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5]
-      screenPosition = [0, -1.5, 0]
-    } else {
-      screenScale = [3, 3, 3]
-      screenPosition = [0, -4, -4]
+    if (typeof window != "undefined") {
+      if (window.innerWidth < 768) {
+        screenScale = [1.5, 1.5, 1.5]
+        screenPosition = [0, -1.5, 0]
+      } else {
+        screenScale = [3, 3, 3]
+        screenPosition = [0, -4, -4]
+      }
     }
-
     return [screenScale, screenPosition]
   }
 
   const adjustIslandForScreenSize = () => {
     let screenScale, screenPosition
 
-    if (window.innerWidth < 768) {
-      screenScale = [5, 5, 5]
-      screenPosition = [0, -6.5, -43.4]
-    } else {
-      screenScale = [20, 20, 20]
-      screenPosition = [0, -6.5, -43.4]
+    if (typeof window != "undefined") {
+      if (window.innerWidth < 768) {
+        screenScale = [10, 10, 10]
+        screenPosition = [0, -6.5, -43.4]
+      } else {
+        screenScale = [15, 15, 15]
+        screenPosition = [0, -6.5, -43.4]
+      }
     }
-
     return [screenScale, screenPosition]
   }
 

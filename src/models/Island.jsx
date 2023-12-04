@@ -6,6 +6,8 @@ Source: https://sketchfab.com/3d-models/the-viking-blacksmith-dae-villages-0e01a
 Title: The Viking Blacksmith | DAE Villages
 */
 
+"use client"
+
 import { useRef, useEffect } from "react"
 import { useGLTF, useAnimations } from "@react-three/drei"
 import { a } from "@react-spring/three"
@@ -684,5 +686,3 @@ export function Island({
     </a.group>
   )
 }
-
-useGLTF.preload(islandScene)

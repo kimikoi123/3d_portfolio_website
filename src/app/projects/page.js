@@ -53,7 +53,7 @@ const Projects = () => {
                   Live Link
                 </Link>
                 <img
-                  src={arrow}
+                  src={arrow.src}
                   alt="arrow"
                   className="w-4 h-4 object-contain"
                 />

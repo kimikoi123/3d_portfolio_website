@@ -7,9 +7,9 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
         Hi, I'm
-        <span className="font-semibold mx-2 text-white">Adrian</span>
+        <span className="font-semibold mx-2 text-white">Kimuel</span>
         👋
-        <br />A Software Engineer from Croatia 🇭🇷
+        <br />A Software Engineer from Philippines
       </h1>
     )
 
@@ -37,7 +37,7 @@ const HomeInfo = ({ currentStage }) => {
           the impact?
         </p>
 
-        <Link to="/projects" className="neo-brutalism-white neo-btn">
+        <Link href="/projects" className="neo-brutalism-white neo-btn">
           Visit my portfolio
           <img src={arrow.src} alt="arrow" className="w-4 h-4 object-contain" />
         </Link>
@@ -53,7 +53,7 @@ const HomeInfo = ({ currentStage }) => {
           keystrokes away
         </p>
 
-        <Link to="/contact" className="neo-brutalism-white neo-btn">
+        <Link href="/contact" className="neo-brutalism-white neo-btn">
           Let's talk
           <img src={arrow.src} alt="arrow" className="w-4 h-4 object-contain" />
         </Link>

@@ -3,11 +3,9 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component"
-
+import "react-vertical-timeline-component/style.min.css"
 import { CTA } from "@/components"
 import { experiences, skills } from "@/constants"
-
-import "react-vertical-timeline-component/style.min.css"
 
 const About = () => {
   return (
@@ -16,15 +14,18 @@ const About = () => {
         Hello, I'm{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
           {" "}
-          Adrian
+          Kimuel
         </span>{" "}
         👋
       </h1>
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Software Engineer based in Croatia, specializing in technical
-          education through hands-on learning and building applications.
+          Software Engineer based in Philippines, specializes in creating and
+          maintaining web applications both the front end and the back end of a
+          website and also services that leverage blockchain technology to
+          enable secure and transparent data storage, validation, and
+          transactions on the internet.
         </p>
       </div>
 
@@ -60,6 +61,7 @@ const About = () => {
           <VerticalTimeline>
             {experiences.map((experience, index) => (
               <VerticalTimelineElement
+                visible={true}
                 key={experience.company_name}
                 date={experience.date}
                 iconStyle={{ background: experience.iconBg }}
