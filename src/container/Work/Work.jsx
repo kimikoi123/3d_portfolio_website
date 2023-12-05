@@ -49,12 +49,12 @@ function Work() {
 
       <div className="app__work-filter">
         {[
-          "UI/UX",
+          // "UI/UX",
           "Web App",
           "Mobile App",
           "React JS",
           "Blockchain",
-          " AI",
+          "AI",
           "All",
         ].map((item, index) => (
           <div
